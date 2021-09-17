@@ -29,8 +29,8 @@ def handle_request(addr, conn, proxy_end):
     proxy_end.shutdown(socket.SHUT_WR)
     data = proxy_end.recv(BUFFER_SIZE)
     print(f"Sending received data {data} to client")
-    conn.close()
-
+    conn.send(data)
+    
 def main():
     #llocal host, extern_host,port,buffer size
     extern_host = 'www.google.com'
@@ -54,9 +54,9 @@ def main():
                 p.daemon = True
                 p.start()
                 print("start process",p)
-
+            conn.close()
+            
 if __name__ == "__main__":
-
     main()
 
 

@@ -1,6 +1,20 @@
-1. a pair of host ip and port is required to create a TCP socket, and then a socket types
+Q1:
+The specification of TCP socket requires a pair of host and port as AF_INET address family, socket type and protocal number.
 
-2.
+Q2:
+The server socket in python is used to associate with a port using bind(),then wait to listen client connection and receive the data sending from client
+The client socket is used to connect the server and send request
 
-3. when we set options for the socket, use a parameter flag socket.SO_REUSEADDR to tell the kernel to reuse a local socket in TIME_WAIT state
+Q3:
+When we set options for the socket, use a parameter flag socket.SO_REUSEADDR to tell the kernel to reuse a local socket in TIME_WAIT state
 
+
+Q4:
+We could get the property of client socket by looking into the 'conn' and host address with port number about incoming connections by looking into 'addr'
+
+
+Q5:
+the recv() returns the response header from the external host within the maximum byte as the BUFFER_SIZE. The exceed part will be cut off.
+
+Q6:
+https://github.com/XZPshaw/F21CMPUT404LABS/tree/main/LAB2

@@ -55,6 +55,7 @@ def main():
 
 				#send data back
 				conn.send(data)
+			conn.close()
 							
 								
 if __name__ == "__main__":

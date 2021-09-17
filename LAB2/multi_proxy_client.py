@@ -7,7 +7,7 @@ HOST = "localhost"
 PORT = 8001
 BUFFER_SIZE = 1024
 
-payload = "GET / HTTP/1.0\r\nHOST: www.google.com\r\n\r\n"
+payload = "GET / HTTP/1.0\r\nHost: www.google.com\r\n\r\n"
 
 def connect(addr):
     try:
