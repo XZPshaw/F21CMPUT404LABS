@@ -1,0 +1,6 @@
+1. a pair of host ip and port is required to create a TCP socket, and then a socket types
+
+2.
+
+3. when we set options for the socket, use a parameter flag socket.SO_REUSEADDR to tell the kernel to reuse a local socket in TIME_WAIT state
+
